@@ -1,0 +1,27 @@
+@font-face{
+    font-family:'Nunito';
+    src: url(./Nunito-Regular.ttf)
+}
+
+@font-face{
+    font-family:'RobotoL';
+    src: url(./Roboto-Light.ttf)
+}
+
+@font-face{
+    font-family:'RobotoR';
+    src: url(./Roboto-Regular.ttf)
+}
+
+.title{
+    font-family: 'Merriweather';
+    color: rgb(0, 0, 0)
+}
+
+.pr{
+    font-family: 'RobotoR'
+}
+
+p{
+    font-family: 'RobotoL'
+}
