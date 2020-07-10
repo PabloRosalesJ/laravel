@@ -18,10 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/buyer', 'BuyerController@all')->name('api.all');
+// Route::get('/buyer/{params}', 'BuyerController@getByParams')->name('api.buyer.byParams');
 
-Route::get('/buyer/{id}', 'BuyerController@getById')->name('api.getById');
-
-Route::get('/buyer/{params}', 'BuyerController@getByParams')->name('api.byParams');
+Route::get('/buyer/{id}', 'BuyerController@getById')->name('api.buyer.getById');
 
 Route::get('/product/{params}', 'ProductController@getByParams')->name('api.product.byParams');
+
+Route::get('/product/getById/{id}', 'ProductController@getById')->name('api.product.show');

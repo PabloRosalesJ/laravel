@@ -54,9 +54,9 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
-    {
-        //
+    public function show(Product $product, $id)
+    {   
+        return response()->json(Product::findOrFail($id));            
     }
 
     /**
@@ -93,9 +93,14 @@ class ProductController extends Controller
         //
     }
 
+    public function getById($id){
+        $product = Product::where('id', $id)->select('id','name', 'p_menudeo','stock')->get();
+        return response()->json($product);
+    }
+
     public function getByParams(string $params)
     {
-        $products = Product::where('name','like','%'.$params.'%')->get();
+        $products = Product::where('name','like','%'.$params.'%')->select('name', 'id')->get();
         
         return response()->json($products);
     }

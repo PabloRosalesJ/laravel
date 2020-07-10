@@ -120,7 +120,19 @@ class BuyerController extends Controller
     public function getById($id)
     {
         $buyer = Buyer::findOrFail($id);  
-        $buyer->person;      
+        $buyer->person;
+                             
         return response()->json($buyer);
     }
+    
+        //          ->select(
+        //             'id',
+        //             'name',
+        //             'ap_pat',
+        //             'ap_mat',
+        //             'address',
+        //             'phone',
+        //             'no_notebook',
+        //             'no_registry'
+        //             )->get();
 }

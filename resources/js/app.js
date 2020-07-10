@@ -8,6 +8,9 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import swalPlugin from './plugins/VueSweetalert2';
+Vue.use(swalPlugin);
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

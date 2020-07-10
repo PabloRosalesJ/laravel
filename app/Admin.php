@@ -16,3 +16,4 @@ class Admin extends Model
         'token'
     ];
 }
+ 

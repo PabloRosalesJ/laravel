@@ -89,8 +89,25 @@ class PersonController extends Controller
         return response()->json(Person::all());
     }
     
-    public function getByParams(string $params)
-    {
-        # code...
-    }
+    // public function getByParams(string $params)
+    // {
+    //     # code...
+    // }
+
+    // public function getByID($id)
+    // {
+    //     $person = Person::where('id', $id)->select(
+    //             'id',
+    //             'name',
+    //             'ap_pat',
+    //             'ap_mat',
+    //             'address',
+    //             'phone',
+    //             'no_notebook',
+    //             'no_registry'
+    //             )->get();
+        
+    //     return response()->json($person);
+    // }
+
 }
